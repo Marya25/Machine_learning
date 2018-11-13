@@ -1,0 +1,107 @@
+************************************************** 
+Data presentation 
+**************************************************
+Number of samples:  801 
+Number of genes:  20531 
+
+Proportion of each cancer class:
+ BRCA    300
+KIRC    146
+LUAD    141
+PRAD    136
+COAD     78
+Name: Class, dtype: int64 
+
+First lines of the dataset:
+   Unnamed: 0  gene_0    gene_1  ...    gene_20529  gene_20530  Class
+0   sample_0     0.0  2.017209  ...      5.286759         0.0   PRAD
+1   sample_1     0.0  0.592732  ...      2.094168         0.0   LUAD
+2   sample_2     0.0  3.511759  ...      1.683023         0.0   PRAD
+3   sample_3     0.0  3.663618  ...      3.292001         0.0   PRAD
+4   sample_4     0.0  2.655741  ...      5.110372         0.0   BRCA
+
+[5 rows x 20533 columns] 
+
+Presence of Na and Null values
+Number of Na:  0 
+Number of Null:  0
+************************************************** 
+Features selection 
+**************************************************
+
+Naive Bayes feature selection results
+Number of features used:  10 	Model accuracy:  0.9045643153526971
+Number of features used:  50 	Model accuracy:  0.995850622406639
+Number of features used:  100 	Model accuracy:  0.991701244813278
+Number of features used:  200 	Model accuracy:  0.991701244813278
+Number of features used:  500 	Model accuracy:  0.991701244813278
+Number of features used:  1000 	Model accuracy:  0.9875518672199171
+Number of features used:  10000 	Model accuracy:  0.8630705394190872
+Number of features used:  20531 	Model accuracy:  0.5975103734439834
+
+Decision Tree feature selection results
+Number of features used:  10 	Model accuracy:  0.8713692946058091
+Number of features used:  50 	Model accuracy:  0.991701244813278
+Number of features used:  100 	Model accuracy:  0.983402489626556
+Number of features used:  200 	Model accuracy:  0.970954356846473
+Number of features used:  500 	Model accuracy:  0.9585062240663901
+Number of features used:  1000 	Model accuracy:  0.966804979253112
+Number of features used:  10000 	Model accuracy:  0.966804979253112
+Number of features used:  20531 	Model accuracy:  0.975103734439834
+
+K nearest neighbor feature selection results
+Number of features used:  10 	Model accuracy:  0.9253112033195021
+Number of features used:  50 	Model accuracy:  1.0
+Number of features used:  100 	Model accuracy:  1.0
+Number of features used:  200 	Model accuracy:  1.0
+Number of features used:  500 	Model accuracy:  1.0
+Number of features used:  1000 	Model accuracy:  1.0
+Number of features used:  10000 	Model accuracy:  1.0
+Number of features used:  20531 	Model accuracy:  1.0
+
+Logistic regression feature selection results
+Number of features used:  10 	Model accuracy:  0.9128630705394191
+Number of features used:  50 	Model accuracy:  1.0
+Number of features used:  100 	Model accuracy:  1.0
+Number of features used:  200 	Model accuracy:  1.0
+Number of features used:  500 	Model accuracy:  1.0
+Number of features used:  1000 	Model accuracy:  1.0
+Number of features used:  10000 	Model accuracy:  1.0
+Number of features used:  20531 	Model accuracy:  1.0
+
+Random forest feature selection results
+Number of features used:  10 	Model accuracy:  0.8921161825726142
+Number of features used:  50 	Model accuracy:  1.0
+Number of features used:  100 	Model accuracy:  1.0
+Number of features used:  200 	Model accuracy:  0.995850622406639
+Number of features used:  500 	Model accuracy:  0.995850622406639
+Number of features used:  1000 	Model accuracy:  0.995850622406639
+Number of features used:  10000 	Model accuracy:  0.995850622406639
+Number of features used:  20531 	Model accuracy:  0.995850622406639
+************************************************** 
+Prediction model 
+**************************************************
+
+
+Feature selection
+For the feature selection K=  75
+
+Selected genes list
+ ['gene_18', 'gene_219', 'gene_220', 'gene_450', 'gene_1510', 'gene_1735', 'gene_1858', 'gene_2037', 'gene_2811', 'gene_3439', 'gene_3461', 'gene_3524', 'gene_3737', 'gene_3813', 'gene_3921', 'gene_5667', 'gene_5829', 'gene_6361', 'gene_6733', 'gene_6937', 'gene_7116', 'gene_7965', 'gene_9175', 'gene_9176', 'gene_9232', 'gene_9626', 'gene_11059', 'gene_11349', 'gene_11352', 'gene_11566', 'gene_11903', 'gene_12069', 'gene_12078', 'gene_12847', 'gene_12848', 'gene_12881', 'gene_12995', 'gene_13076', 'gene_13202', 'gene_13639', 'gene_13818', 'gene_13976', 'gene_14114', 'gene_14818', 'gene_14821', 'gene_15589', 'gene_15591', 'gene_15894', 'gene_15895', 'gene_15896', 'gene_15898', 'gene_15899', 'gene_16088', 'gene_16105', 'gene_16130', 'gene_16131', 'gene_16132', 'gene_16133', 'gene_16156', 'gene_16169', 'gene_16173', 'gene_16246', 'gene_16259', 'gene_16337', 'gene_16392', 'gene_17949', 'gene_18042', 'gene_18135', 'gene_18214', 'gene_18745', 'gene_19151', 'gene_19153', 'gene_19159', 'gene_19236', 'gene_19648']
+
+
+Train and Test set description
+Train set size:  560 
+Test set size:  241
+
+
+Model Evaluation
+Cross table between predicted and true cancer class:
+ col_0  BRCA  COAD  KIRC  LUAD  PRAD
+Class                              
+BRCA    100     0     0     0     0
+COAD      0    25     0     0     0
+KIRC      0     0    39     0     0
+LUAD      0     0     0    38     0
+PRAD      0     0     0     0    39 
+Model accuracy : 1.0
